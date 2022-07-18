@@ -39,6 +39,12 @@ public class SeleniumBase {
         DisEn.sendKeys("Disable / Enable");
 
 
+        // find Support button
+        WebElement Support = driver.findElement(By.cssSelector("[href=\"/support\"]"));
+
+        // click on Support button
+        Support.click();
+
 
 
 
