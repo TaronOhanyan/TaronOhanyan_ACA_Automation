@@ -32,8 +32,15 @@ public class SeleniumBase {
         HONDACheckBox.click();
 
 
-        //find Diasble / Enable buttons
+        //find Disable / Enable buttons
         WebElement DisEn = driver.findElement(By.id("enabled-example-input"));
+
+        // input Disable / Enable fields
+        DisEn.sendKeys("Disable / Enable");
+
+
+
+
 
 
 
