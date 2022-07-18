@@ -19,10 +19,22 @@ public class SeleniumBase {
 
 
         //find BMW RadioButton
-        WebElement BMWRadioButton = driver.findElement(By.id("id=\"bmwradio"));
+        WebElement BMWRadioButton = driver.findElement(By.id("bmwradio"));
 
         // click on BMW RadioButton
         BMWRadioButton.click();
+
+
+        //find BMW HONDA CheckBox
+        WebElement HONDACheckBox = driver.findElement(By.id("hondacheck"));
+
+        // click on HONDA CheckBox
+        HONDACheckBox.click();
+
+
+        //find Diasble / Enable buttons
+        WebElement DisEn = driver.findElement(By.id("enabled-example-input"));
+
 
 
 //        driver.close();
