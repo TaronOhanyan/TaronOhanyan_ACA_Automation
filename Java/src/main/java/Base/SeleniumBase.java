@@ -39,8 +39,46 @@ public class SeleniumBase {
         DisEn.sendKeys("Disable / Enable");
 
 
+        // find Support button
+        WebElement Support = driver.findElement(By.cssSelector("[href=\"/support\"]"));
+
+        // click on Support button
+        Support.click();
 
 
+
+        // find Name
+        WebElement Name = driver.findElement(By.cssSelector("[name=\"name\"]"));
+
+        // input Name field
+        Name.sendKeys("Taron");
+
+
+        // find Email
+        WebElement Email = driver.findElement(By.cssSelector("[type=\"email\"]"));
+
+        // input Email field
+        Email.sendKeys("Taron@gmail.com");
+
+
+        // find Comment
+        WebElement Comment = driver.findElement(By.cssSelector("[class=\"form-control\"]"));
+
+        // input Comment field
+        Comment.sendKeys("Hello World");
+
+
+        // find Submit button
+        WebElement Submit = driver.findElement(By.cssSelector("[type=\"submit\"]"));
+
+        // click on Submit button
+        Submit.click();
+
+
+        // find Submit button
+        WebElement ThankYou = driver.findElement(By.cssSelector("[style=\"text-align:center;color:#3c763d;\"]"));
+
+        // click on Submit button
 
 
 
