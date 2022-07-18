@@ -75,13 +75,6 @@ public class SeleniumBase {
         Submit.click();
 
 
-        // find Submit button
-        WebElement ThankYou = driver.findElement(By.cssSelector("[style=\"text-align:center;color:#3c763d;\"]"));
-
-        // click on Submit button
-
-
-
 //        driver.close();
 
 
