@@ -17,10 +17,14 @@ public class SeleniumBase {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.techlistic.com/p/demo-selenium-practice.html");
 
+        //Check if Adobe word is displayed
         boolean value = driver.findElement(By.cssSelector("[style=\"border: 1px solid rgb(221, 221, 221); box-sizing: inherit; padding: 8px;\"]")).isDisplayed();
         System.out.println(value);
 
 
+        //Check if Yoshi Tannamuri word is displayed
+        boolean value1 = driver.findElement(By.cssSelector("[style=\"border: 1px solid rgb(221, 221, 221); box-sizing: inherit; padding: 8px;\"]")).isDisplayed();
+        System.out.println(value1);
 
 
 
