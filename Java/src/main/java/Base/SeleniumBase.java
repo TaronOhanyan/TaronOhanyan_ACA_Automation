@@ -35,6 +35,9 @@ public class SeleniumBase {
         selectObject.selectByValue("386");
 
 
+        WebElement ToyotaCamry = driver.findElement(By.id("v-model"));
+        Select Model = new Select(ToyotaCamry);
+        Model.selectByValue("2517");
 
 
 
@@ -43,25 +46,6 @@ public class SeleniumBase {
 
 
 
-//        driver.navigate().to("https://www.amazon.com/");
-//        driver.navigate().back();
-//        TimeUnit.SECONDS.sleep(1);
-//        String title = driver.getTitle();
-//        System.out.println(title);
-//
-//        //find the search field
-//        WebElement searchField = driver.findElement(By.id("twotabsearchtextbox"));
-//
-//        // input value into field
-//        searchField.sendKeys("macbook");
-//
-//        // find search button
-//        WebElement searchButton = driver.findElement(By.cssSelector("[id='nav-search-submit-text']"));
-//
-//        // click on search button
-//        searchButton.click();
-//
-//
 //        driver.close();
 
 
