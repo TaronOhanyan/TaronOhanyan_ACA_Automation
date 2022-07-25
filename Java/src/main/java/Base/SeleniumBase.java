@@ -1,6 +1,7 @@
 package Base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,8 +24,11 @@ public class SeleniumBase {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.auto.am/");
 
-        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(100))
-                .until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class=\"select2-selection select2-selection--single\"]")));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='make']")));
 
         WebElement selectElement = driver.findElement(By.id("filter-make"));
         Select selectObject = new Select(selectElement);
