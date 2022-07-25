@@ -23,12 +23,12 @@ public class SeleniumBase {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.auto.am/");
 
-        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
+        WebElement element = new WebDriverWait(driver, Duration.ofSeconds(100))
                 .until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class=\"select2-selection select2-selection--single\"]")));
 
-        WebElement selectElement = driver.findElement(By.id("386"));
+        WebElement selectElement = driver.findElement(By.id("filter-make"));
         Select selectObject = new Select(selectElement);
-        selectObject.selectByValue("value1");
+        selectObject.selectByValue("386");
 
 
 
