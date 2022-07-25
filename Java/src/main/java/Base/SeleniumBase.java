@@ -1,11 +1,11 @@
 package Base;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 public class SeleniumBase {
     public static void main(String[] args) throws InterruptedException {
@@ -17,16 +17,16 @@ public class SeleniumBase {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.techlistic.com/p/demo-selenium-practice.html");
 
-        //Check if Adobe word is displayed
-        boolean value = driver.findElement(By.cssSelector("[style=\"border: 1px solid rgb(221, 221, 221); box-sizing: inherit; padding: 8px;\"]")).isDisplayed();
-        System.out.println(value);
+        List<WebElement> table = driver.findElements(By.cssSelector("tr[style $= 'box-sizing: inherit;']"));
+        System.out.println(table.size()+ "*******************");
+        for (int i = 1; i <table.size() ; i++) {
+            if (table.size() == 7){
+                WebElement el = table.get(i).findElement(By.cssSelector("td:nth-child(1)"));
+                System.out.println(el.getText() + "***********-------------");
 
-
-        //Check if Yoshi Tannamuri word is displayed
-        boolean value1 = driver.findElement(By.cssSelector("[style=\"border: 1px solid rgb(221, 221, 221); box-sizing: inherit; padding: 8px;\"]")).isDisplayed();
-        System.out.println(value1);
-
-
+            }
+            System.out.println(table.get(i).getText());
+        }
 
 
 
