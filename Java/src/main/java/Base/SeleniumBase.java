@@ -9,10 +9,10 @@ import java.util.List;
 
 public class SeleniumBase {
     public static void main(String[] args) throws InterruptedException {
-        amazonTest();
+        techlisticTest();
     }
 
-    public static void amazonTest() throws InterruptedException {
+    public static void techlisticTest() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.techlistic.com/p/demo-selenium-practice.html");
