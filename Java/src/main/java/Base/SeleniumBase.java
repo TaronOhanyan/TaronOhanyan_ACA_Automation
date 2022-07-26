@@ -26,6 +26,9 @@ public class SeleniumBase {
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+//        driver.manage
+//        txt.click();
+
 
         WebElement element = new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(By.xpath("//label[@for='make']")));
