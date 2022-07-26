@@ -16,7 +16,6 @@ public class SeleniumBase {
         System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.amazon.com/");
-        ederfr
 //        driver.navigate().to("https://www.amazon.com/");
 //        driver.navigate().back();
 //        TimeUnit.SECONDS.sleep(1);
