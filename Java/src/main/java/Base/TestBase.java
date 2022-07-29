@@ -1,6 +1,7 @@
 package Base;
 
 import org.junit.Test;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,14 +16,24 @@ public class TestBase {
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.demoblaze.com/index.html");
 
-        WebElement SignUp = driver.findElement(By.id("signin2"));
-        SignUp.click();
+        //driver.findElement(By.id("signin2")).click();
+        driver.findElement(By.linkText("Sign up")).click();
 
-        // find Name
-        WebElement Name = driver.findElement(By.id("sign-username"));
+        for (String windowName : driver.getWindowHandles()) {
+            driver.switchTo().window(windowName);
+        }
 
-        // input Name field
-        Name.sendKeys("Taron");
+        driver.findElement(By.id("sign-username")).sendKeys("Taron");
+
+
+
+
+
+
+//        Alert alert = driver.switchTo().alert();
+//        alert.getText();
+//        driver.findElement(By.id("sign-username")).sendKeys("Taron");
+
 
 
 
